@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/css.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script src="js/JS.js"></script>
+    <title>Formularios</title>
+</head>
+
+<body>
+    <div class="contenedor-formulario">
+        <div class="wrap">
+            <form action="action_page.php" class="formulario" name="formulario_registro" method="post">
+                <div>
+                    <h1>Ingresar Datos De La Persona</h1>
+                    <div class="input-group">
+                        <input type="text" id="nombre" name="nombre">
+                        <label class="label" for="nombre">Nombre Completo:</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="cedula" name="cedula">
+                        <label class="label" for="nombre">Cedula:</label>
+                    </div>
+
+                    <div class="input-group radio">
+                        <p>Seleccione Sexo:</p>
+                        <input type="radio" name="sexo" id="hombre" value="Hombre">
+                        <label for="hombre">Hombre</label>
+                        <input type="radio" name="sexo" id="mujer" value="Mujer">
+                        <label for="mujer">Mujer</label>
+                        <input type="radio" name="sexo" id="indeterminado" value="Indeterminado">
+                        <label for="indeterminado">Indeterminado</label>
+                    </div>
+
+                    <div class="input-group checkbox" id="gustos">
+                        <p>Seleccione Aficiones:</p>
+                        <input type="checkbox" name="aficion" id="deportes" value="Deportes">
+                        <label for="deportes">Deportes</label>
+                        <input type="checkbox" name="aficion" id="cine" value="Cine">
+                        <label for="cine">Cine</label>
+                        <input type="checkbox" name="aficion" id="compras" value="Compras">
+                        <label for="compras">Compras</label>
+                        <input type="checkbox" name="aficion" id="viajes" value="Viajes">
+                        <label for="viajes">Viajes</label>
+                        <input type="checkbox" name="aficion" id="farandula" value="Farandula">
+                        <label for="farandula">Farandula</label>
+                    </div>
+
+                    <div>
+                        Selecione Provincia:
+                        <select name="provincia">    
+                           <option value="Panamá" selected="selected">Panamá</option>
+                           <option value="Panamá Oeste">Panamá Oeste</option>
+                           <option value="Coclé">Coclé</option>
+                           <option value="Veraguas">Veraguas</option>
+                           <option value="Bocas del Toro">Bocas del Toro</option>
+                           <option value="Colón">Colón</option>
+                           <option value="Chiriquí">Chiriquí</option>
+                           <option value="Darién">Darién</option>
+                           <option value="Herrera">Herrera</option>
+                           <option value="Los Santos">Los Santos</option>
+                           <option value="Emberá-Wounaan">Emberá-Wounaan</option>
+                           <option value="Guna Yala">Guna Yala</option>
+                           <option value="Ngäbe-Buglé">Ngäbe-Buglé</option>
+                           <option value="Guna de Madugandí">Guna de Madugandí</option>
+                           <option value="Guna de Wargandí">Guna de Wargandí</option>
+                        </select>
+                    </div>
+
+                    <div>Fecha nacimiento: <input type="date" name="user_date" id="user_date" step="1" min="1900-01-01" max="2018-12-31" value="2018-08-03"></div>
+                    <input type="submit" id="btn-submit" onclick="getData()" value="Calcular">
+                    <div id="resultado" name="datos"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/formulario.js"></script>
+</body>
+
+</html>
