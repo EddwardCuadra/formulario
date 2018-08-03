@@ -11,3 +11,4 @@ echo "<p>$sexo</p>";
 echo "<p>$aficion</p>";
 echo "<p>$provincia</p>";
 echo "<p>$fecha</p>";
+?>
